@@ -17,6 +17,7 @@ app.use('/urls', urlRouter)
 
 app.use(express.static(path.join(__dirname,'../src',)))
 
+
 app.get((req,res,next) =>{
     res.statusCode = 200
     res.setHeader('Content-Type','text/html')
