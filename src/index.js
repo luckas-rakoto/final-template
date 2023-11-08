@@ -34,7 +34,7 @@ function makeid(length) {
 
 async function postData(url,data={}){
   const response = await fetch(url, {
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    method: 'POST', // *GETLOST, POST, PUT, DELETE, etc.
     headers: {
       'Content-Type': 'application/json'
     },
