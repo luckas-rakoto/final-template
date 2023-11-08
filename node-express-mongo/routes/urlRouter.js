@@ -33,10 +33,6 @@ urlRouter.route("/:urlId")
     let link = await mongo.findOGLink("http://localhost:3000/urls/" + req.params.urlId)
     res.redirect(link)
 })
-.post((req,res,next)=>{
-    res.status=403
-    res.end('POST operation not supported on /urls/' + req.params.urlId)
-})
 .put((req,res,next)=>{
     res.write('Updating the url: ' + req.params.urlId + '\n')
     res.end(`Will update the dish: ${req.body.name} with details: ${req.body.description}`)
